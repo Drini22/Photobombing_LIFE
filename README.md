@@ -14,6 +14,6 @@ The main steps of the algorithm :
     $$(\delta_{x,q,i+1} ,\delta_{y,q,i+1}) = (\delta_{x,q,i} ,\delta_{y,q,i}) - H_Q L^{-1}\nabla_Q L $$ 
 4. Repeat 2 and 3 alternatively until good enough convergence. -> Since the Newton-Raphson method converges exponentially fast, in practice only 5 steps are enough for most cases.
 5. Repeat 1 but start with $Q_2=p_2$. Keep the best of $Q_1,Q_2$ -> We choose between $Q_1$ and $Q_2$ by setting $$Q^{\star} =  \mbox{argmin}_{Q \in \{Q_1,Q_2\}} \mathcal{L}(Q,P)$$
-6. Return the value of target confusion map 
+6. Return the value of target confusion map and the SNR of $Q^\star*
     return : $$\mathcal{\mathcal{D}}(P,\sigma) = \min_{P_{s} \in \mathcal{P}(P)-\{P\}} \mathcal{L} (P_{s}, Q^{\star},\sigma) \notag - \mathcal{L}(P,Q^\star,\sigma)$$
     if $\mathcal{D} > 0$, then by definition there is contamination.
