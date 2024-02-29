@@ -2,11 +2,11 @@
 
 Contains C++ code used to find the SNR of Q from the SNR of P.
 
-P={p_1,p_2} is a configuration of 2 point sources located in the field of view of LIFE. The SNR of P is calculated using LIFEsim. 
+Where, 
+- P={p_1,p_2} is a configuration of 2 point sources located in the field of view of LIFE. The SNR of P is calculated using LIFEsim. 
+- Q is a configuration of 1 point source that minimises the L2 loss L(P,Q). To calculate this quantity one needs to know the SNR of P (given by LIFEsim).
 
-Q is a configuration of 1 point source that minimises the L2 loss L(P,Q). To calculate this quantity one needs to know the SNR of P (given by LIFEsim).
-
-The algorithm :
+The main steps of the algorithm :
 1. Initial point sources -> Start with $Q_1 = \{p_1\}$
 2. Linear regression -> The luminosity of $Q$ is updated by calculating integrals. In practice one uses the Simpson formula or similar to approximate integrals to compute $$l_Q = \frac{<\mu_p, \mu_q>}{<\mu_q, \mu_q>} $$
   if $l_Q < 0$ then we set the position of $Q$ to the opposite side and its luminosity to $|l_Q|$.
