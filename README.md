@@ -8,9 +8,7 @@ Q is a configuration of 1 point source that minimises the L2 loss L(P,Q). To cal
 
 The algorithm :
 1. Initial point sources -> Start with $Q_1 = \{p_1\}$
-2. Linear regression -> The luminosity of $Q$ is updated by calculating integrals. In practice one uses the Simpson formula or similar to approximate integrals to compute \begin{equation}
-      l_Q = \frac{<\mu_p, \mu_q>}{<\mu_q, \mu_q>}
-\end{equation} 
+2. Linear regression -> The luminosity of $Q$ is updated by calculating integrals. In practice one uses the Simpson formula or similar to approximate integrals to compute $$l_Q = \frac{<\mu_p, \mu_q>}{<\mu_q, \mu_q>} $$
   if $l_Q < 0$ then we set the position of $Q$ to the opposite side and its luminosity to $|l_Q|$.
 3. Newton-Raphson method -> The position of $Q$ is updated by computing the gradient $\nabla_Q L$ and the Hessian $H_Q L$ of the loss with respect to $Q$. In practice the analytical expressions are generated and optimised for c++ using sympy library in python \cite{10.7717/peerj-cs.103}. See section 5.2 in the appendix for the full expression.
     \begin{align}
