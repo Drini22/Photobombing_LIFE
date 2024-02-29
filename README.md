@@ -19,4 +19,4 @@ The main steps of the algorithm :
     return : $$\mathcal{\mathcal{D}}(P,\sigma) = \min_{P_{s} \in \mathcal{P}(P)-\{P\}} \mathcal{L} (P_{s}, Q^{\star},\sigma) \notag - \mathcal{L}(P,Q^\star,\sigma)$$
     if $\mathcal{D} > 0$, then by definition there is contamination.
 
-# PAPER : ... for more information
+### PAPER : ... for more information
