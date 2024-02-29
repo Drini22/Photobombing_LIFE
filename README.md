@@ -1,6 +1,6 @@
 # Photobombing_LIFE
 
-Contains C++ code used to find the SNR of Q from the SNR of P.
+Contains C++ code used to find the SNR of Q and target confusion value $\mathcal{D}$ from the SNR of P.
 
 Where, 
 - P={p_1,p_2} is a configuration of 2 point sources located in the field of view of LIFE. The SNR of P is calculated using LIFEsim. 
