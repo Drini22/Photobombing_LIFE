@@ -1,6 +1,6 @@
 # Photobombing_LIFE
 
-Contains C++ code (.hpp and .cpp files) and the Xcode project used to find the SNR of Q and target confusion value $\mathcal{D}$ from the SNR of P.
+Contains C++ code (.hpp and .cpp files) used to find the SNR of Q and target confusion value $\mathcal{D}$ from the SNR of P.
 
 Where, 
 - SNR = Signal to noise ratio
