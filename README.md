@@ -18,5 +18,3 @@ The main steps of the algorithm :
 6. Return the value of target confusion map and the SNR of $Q^\star*
     return : $$\mathcal{\mathcal{D}}(P,\sigma) = \min_{P_{s} \in \mathcal{P}(P)-\{P\}} \mathcal{L} (P_{s}, Q^{\star},\sigma) \notag - \mathcal{L}(P,Q^\star,\sigma)$$
     if $\mathcal{D} > 0$, then by definition there is contamination.
-
-### PAPER : ... for more information
